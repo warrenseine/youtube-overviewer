@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.jsmovie.1.4.3b.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $('#movie').jsMovie({
+                sequence: '########.jpg',
+                from: 1,
+                to: 120,
+                folder: "img/",
+                height: 256,
+                width: 256,
+                fps: 24,
+                playOnLoad: true
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <div id='movie'></div>
+    </body>
+</html>
