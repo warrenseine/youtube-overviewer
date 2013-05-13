@@ -11,8 +11,6 @@ import shutil
 import subprocess
 import tempfile
 
-#import anim
-
 VERBOSE = 0
 MAX_QUALITY = "18"
 FORMAT = "jpg"
@@ -27,6 +25,7 @@ def error(text, code=0):
 
 def download(video, directory):
     return subprocess.call([
+        sys.executable,
         "./youtube-dl",
         video,
         "-v" if VERBOSE >= 1 else "-q",
