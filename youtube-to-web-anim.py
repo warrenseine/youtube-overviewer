@@ -12,7 +12,7 @@ import subprocess
 import tempfile
 
 VERBOSE = 0
-MAX_QUALITY = "18"
+QUALITY = "37/22/18"
 FORMAT = "jpg"
 
 
@@ -29,7 +29,7 @@ def download(video, directory):
         "./youtube-dl",
         video,
         "-v" if VERBOSE >= 1 else "-q",
-        "--max-quality", MAX_QUALITY,
+        "-f", QUALITY,
         "-o", os.path.join(directory, "%(id)s.%(ext)s")
     ])
 
